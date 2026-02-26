@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gesture Controlled 3D Particle Universe</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <video id="input-video" playsinline muted></video>
+    <canvas id="overlay-canvas"></canvas>
+
+    <div class="hud">
+      <h1>Gesture Controlled 3D Particle Universe</h1>
+      <p>
+        Pinch with your thumb and index finger to trigger expansion and palette shifts.
+        Open your hand to cool particles down.
+      </p>
+      <div class="controls">
+        <label for="template-select">Template</label>
+        <select id="template-select">
+          <option value="heart">Heart</option>
+          <option value="flower">Flower</option>
+          <option value="saturn">Saturn</option>
+          <option value="firework">Firework</option>
+          <option value="spiral">Spiral Nebula</option>
+        </select>
+        <button id="next-template">Next Template</button>
+      </div>
+      <p id="status">Initializing camera and hand tracking…</p>
+    </div>
+
+    <div id="three-root"></div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
